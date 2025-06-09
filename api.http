@@ -1,0 +1,17 @@
+### Get Mock users
+GET http://localhost:3000/api/mocks/mockingusers
+
+### Get Mock pets
+GET http://localhost:3000/api/mocks/mockingpets
+
+### Crear usuarios y mascotas mock
+POST http://localhost:3000/api/mocks/generatedata
+Content-Type: application/json
+
+{
+  "users": 0,
+  "pets": 3
+}
+
+### Get All users
+GET http://localhost:3000/api/users

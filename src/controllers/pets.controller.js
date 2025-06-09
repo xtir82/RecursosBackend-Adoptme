@@ -2,7 +2,7 @@ import PetDTO from "../dto/Pet.dto.js";
 import { petsService } from "../services/index.js"
 import __dirname from "../utils/index.js";
 
-const getAllPets = async(req,res)=>{
+const getAllPets = async(req,res)=> {
     const pets = await petsService.getAll();
     res.send({status:"success",payload:pets})
 }
@@ -15,7 +15,7 @@ const createPet = async(req,res)=> {
     res.send({status:"success",payload:result})
 }
 
-const updatePet = async(req,res) =>{
+const updatePet = async(req,res) => {
     const petUpdateBody = req.body;
     const petId = req.params.pid;
     const result = await petsService.update(petId,petUpdateBody);
@@ -28,7 +28,7 @@ const deletePet = async(req,res)=> {
     res.send({status:"success",message:"pet deleted"});
 }
 
-const createPetWithImage = async(req,res) =>{
+const createPetWithImage = async(req,res) => {
     const file = req.file;
     const {name,specie,birthDate} = req.body;
     if(!name||!specie||!birthDate) return res.status(400).send({status:"error",error:"Incomplete values"})
