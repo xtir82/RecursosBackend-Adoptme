@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 
+import { setupSwagger } from './swagger.js'; // Import the setupSwagger function
 import usersRouter from './routes/users.router.js';
 import petsRouter from './routes/pets.router.js';
 import adoptionsRouter from './routes/adoption.router.js';
@@ -12,6 +13,8 @@ import mocksRouter from './routes/mocks.router.js';
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT||8080;
+
+setupSwagger(app); // Call the setupSwagger function to set up Swagger documentation
 
 app.use(express.json());
 app.use(cookieParser());
