@@ -28,7 +28,6 @@ app.use('/api/mocks', mocksRouter);
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     app.listen(PORT,()=>console.log(`Listening on ${PORT}`));
-    console.log( mongoose.connection.readyState );
   })
   .catch(err => {
     console.error('Error connecting to MongoDB:', err);
