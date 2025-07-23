@@ -15,3 +15,12 @@ Content-Type: application/json
 
 ### Get All users
 GET http://localhost:3000/api/users
+
+### Get All pets
+GET http://localhost:3000/api/pets
+
+### Get All adoptions
+GET http://localhost:3000/api/adoptions
+
+###Post Adoption (Params userId, petId)
+POST http://localhost:3000/api/adoptions/0d9c75e2f1b9dccd15f962bf/22d37cd610ae9efc01de8f04
