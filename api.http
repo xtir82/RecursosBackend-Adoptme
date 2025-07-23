@@ -24,3 +24,11 @@ GET http://localhost:3000/api/adoptions
 
 ###Post Adoption (Params userId, petId)
 POST http://localhost:3000/api/adoptions/0d9c75e2f1b9dccd15f962bf/22d37cd610ae9efc01de8f04
+
+
+###Post Adoption Error (Params userId, petId)
+POST http://localhost:3000/api/adoptions/e482ba1b68216034ef2cc793/22d37cd610ae9efc01de8f05
+
+
+###Post Adoption Error (Params userId, petId)
+POST http://localhost:3000/api/adoptions/e482ba1b68216034ef2cc792/22d37cd610ae9efc01de8f04
